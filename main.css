@@ -51,9 +51,7 @@ a.nav__link:hover {
   align-items: stretch;
 }
 
-@media (max-width: 600px) {
-  .column {
-    flex: 100%;
-    max-width: 100%;
-  }
+.gallery-heading {
+  text-align: center;
+  padding-bottom: 15px;
 }
