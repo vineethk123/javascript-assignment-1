@@ -10,7 +10,8 @@
       href="https://fonts.googleapis.com/css?family=Roboto:400,700"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="main.css" />
+    <link rel="stylesheet" href="css/main.css" />
+    <script src="js/index.js"></script>
   </head>
   <body>
     <div class="site-container">
@@ -25,8 +26,25 @@
         </nav>
       </div>
       <div class="site-content">
-        <h2>Contact</h2>
-        <p><strong>Email: </strong>vineeth.kolluru@zemosolabs.com</p>
+        <h2>Contact Me</h2>
+        <form
+          action="javascript:void(0);"
+          onsubmit="validateForm()"
+          id="contact-form"
+        >
+          <p class="form-field-wrapper">
+            <label>Name:</label>
+            <input type="text" id="sender-name" class="form__input" required />
+          </p>
+          <p class="form-field-wrapper">
+            <label>Email:</label>
+            <input type="email" id="sender-email" required />
+          </p>
+          <p class="form-field-wrapper">
+            <input type="submit" value="Submit" class="submit-button" />
+          </p>
+        </form>
+        <p id="submission-status"></p>
       </div>
     </div>
   </body>
