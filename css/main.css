@@ -38,6 +38,12 @@ a.nav__link:hover {
   margin-bottom: 15px;
 }
 
+.form__input {
+  padding: 4px;
+  border: 1px solid #000000;
+  border-radius: 4px;
+}
+
 .submit-button {
   padding: 5px;
   background-color: #373277;
