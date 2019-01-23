@@ -34,6 +34,20 @@ a.nav__link:hover {
   padding-left: 2%;
 }
 
+.form-field-wrapper {
+  margin-bottom: 15px;
+}
+
+.submit-button {
+  padding: 5px;
+  background-color: #373277;
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  font-size: 0.8em;
+  cursor: pointer;
+}
+
 .grid-container {
   display: grid;
   width: 100%;
