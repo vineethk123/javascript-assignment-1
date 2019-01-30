@@ -11,20 +11,11 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="css/main.css" />
-    <script src="js/index.js"></script>
+    <link rel="stylesheet" href="css/contact-page.css" />
   </head>
   <body>
     <div class="site-container">
-      <div class="nav-container">
-        <nav class="menu">
-          <a href="index.html" class="nav__link">Home</a>
-          <a href="about.html" class="nav__link" onclick="renderAboutPage"
-            >About Me</a
-          >
-          <a href="contact.html" class="nav__link">Contact Me</a>
-          <a href="gallery.html" class="nav__link">My Gallery</a>
-        </nav>
-      </div>
+      <div class="nav-container"></div>
       <div class="site-content">
         <h2>Contact Me</h2>
         <form
@@ -32,7 +23,7 @@
           onsubmit="validateForm()"
           id="contact-form"
         >
-          <p class="form-field-wrapper">
+          <p>
             <label>Name:</label>
             <input
               type="text"
@@ -42,16 +33,28 @@
               required
             />
           </p>
-          <p class="form-field-wrapper">
+          <p>
             <label>Email:</label>
             <input
               type="email"
-              placeholder="You Email"
+              placeholder="Your Email"
               id="sender-email"
               class="form__input"
               required
             />
           </p>
+          <div class="message-box">
+            <span> <label class="text-area-label">Message: </label> </span>
+            <textarea
+              name="message"
+              id="sender-message"
+              cols="25"
+              rows="5"
+              placeholder="Message"
+              class="form__input"
+              required
+            ></textarea>
+          </div>
           <p class="form-field-wrapper">
             <input type="submit" value="Submit" class="submit-button" />
           </p>
@@ -59,5 +62,11 @@
         <p id="submission-status"></p>
       </div>
     </div>
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.js"
+      integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/index.js"></script>
   </body>
 </html>

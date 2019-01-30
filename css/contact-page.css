@@ -1,0 +1,28 @@
+.form__input {
+  padding: 0.5vw;
+  border: 0.1vw solid #000000;
+  border-radius: 1vw;
+  margin: 0 1vw 0 1vw;
+}
+
+.message-box {
+  display: flex;
+  flex-flow: row;
+  align-items: flex-start;
+}
+
+.submit-button {
+  padding: 0.5vw;
+  background-color: #373277;
+  color: #ffffff;
+  border: none;
+  border-radius: 0.35vw;
+  font-size: 1vw;
+  cursor: pointer;
+}
+
+input:focus,
+textarea:focus,
+button:focus {
+  outline: none;
+}
