@@ -11,6 +11,8 @@
     />
     <link rel="stylesheet" href="css/main.css" />
     <link rel="stylesheet" href="css/gallery.css" />
+    <link rel="stylesheet" href="css/modal.css" />
+    <link rel="stylesheet" href="css/contact-page.css" />
   </head>
   <body>
     <div class="site-container">
@@ -26,17 +28,74 @@
       <div class="site-content">
         <h2 class="page-heading">Gallery Admin</h2>
         <div class="add-item-btn-container">
-          <button onclick="addImage">+ Add Image</button>
+          <button onclick="addImage()">+ Add Image</button>
         </div>
         <div id="all-image-container"></div>
       </div>
-      <!--<div id="modal">
-         Modal content
+      <div id="modal">
+        <!--Modal content-->
         <div class="modal-content">
-          <span class="close">&times;</span>
-          <p>Some text in the Modal..</p>
+          <div class="modal-header" data-image-id="-1">
+            <p id="modal-heading"></p>
+            <span class="modal-close" onclick="hideModal()">&times;</span>
+          </div>
+          <div class="modal-body">
+            <form
+              action="javascript:void(0);"
+              onsubmit="validateImageInformation()"
+              id="image-info-form"
+            >
+              <p>
+                <label>URL:</label>
+                <input
+                  type="url"
+                  placeholder="http://www.google.com"
+                  pattern="http[s]?:\/\/.*\..*\..*"
+                  id="image-url"
+                  class="form__input"
+                  required
+                />
+              </p>
+              <p>
+                <label>Name:</label>
+                <input
+                  type="text"
+                  placeholder="scenary, pizza.."
+                  id="image-name"
+                  class="form__input"
+                  required
+                />
+              </p>
+              <p class="modal-body-row">
+                <label>Description:</label>
+                <textarea
+                  id="image-description"
+                  cols="25"
+                  rows="5"
+                  class="form__input"
+                  placeholder="Write something about the image.."
+                  required
+                ></textarea>
+              </p>
+              <p>
+                <label>Upload Date:</label>
+                <input
+                  type="date"
+                  id="image-upload-date"
+                  class="form__input"
+                  required
+                />
+              </p>
+              <p>
+                <input type="submit" value="Submit" class="form-button" />
+                <button class="form-button" onclick="hideModal()">
+                  Cancel
+                </button>
+              </p>
+            </form>
+          </div>
         </div>
-      </div>-->
+      </div>
     </div>
     <script src="js/gallery.js"></script>
   </body>

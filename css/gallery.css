@@ -52,24 +52,32 @@
   background: rgba(0, 0, 0, 0.4);
 }
 
-.image-container > button {
+.hover-button {
   position: absolute;
-  top: 6.5vw;
-  left: 8.2vw;
+  top: 7vw;
   background-color: transparent;
   font-family: "Roboto", sans-serif;
   font-size: 1vw;
   text-align: center;
   color: white;
   border: solid 2px white;
-  padding: 0.2vw 1.2vw;
   z-index: 1;
   outline: none;
   opacity: 0;
   transition: opacity 0.35s ease;
 }
 
-.image-container:hover button {
+.edit-button {
+  left: 1.5vw;
+  padding: 0.2vw 1.8vw;
+}
+
+.remove-button {
+  left: 9vw;
+  padding: 0.2vw 0.8vw;
+}
+
+.image-container:hover .hover-button {
   cursor: pointer;
   opacity: 1;
 }

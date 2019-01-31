@@ -11,7 +11,7 @@
   align-items: flex-start;
 }
 
-.submit-button {
+.form-button {
   padding: 0.5vw;
   background-color: #373277;
   color: #ffffff;
@@ -19,6 +19,7 @@
   border-radius: 0.35vw;
   font-size: 1vw;
   cursor: pointer;
+  margin-right: 1vw;
 }
 
 input:focus,
