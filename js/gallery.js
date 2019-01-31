@@ -36,6 +36,8 @@ let stringImagesInformation = `{
       "uploadDate": "17-01-2016"
     }
   }`;
+
+const imagesContainer = document.getElementById("all-image-container");
 // Store images information in local storage and retreive it as a JSON object.
 localStorage.setItem("images-information", stringImagesInformation);
 let retrievedImagesInformation = localStorage.getItem("images-information");
@@ -44,13 +46,17 @@ let jsonImagesInformation = JSON.parse(retrievedImagesInformation);
 /**
  * Take a JSON object containing multiple images information and render them inside div with
  * id 'images-container'.
+ * @param {Object} jsonImagesInformation
  */
-readImagesInformation = imagesInformation => {
-  let allImageTags = [];
-  let imagesContainer = document.getElementById("images-container");
-  for (let [imageId, imageInformation] of Object.entries(imagesInformation)) {
-    allImageTags.push(
-      "<img src=" +
+function readImagesInformation() {
+  let allImageContainers = [];
+  for (let [imageId, imageInformation] of Object.entries(
+    jsonImagesInformation
+  )) {
+    allImageContainers.push(
+      "<div class=image-container id=" +
+        imageId +
+        "><img src=" +
         imageInformation.imageURL +
         " data-name=" +
         imageInformation.name +
@@ -58,12 +64,23 @@ readImagesInformation = imagesInformation => {
         imageInformation.description +
         " data-upload-date=" +
         imageInformation.uploadDate +
-        "id=" +
+        " class=gallery-image /> \
+          <div class=overlay></div> \
+          <button onclick=removeImage('" +
         imageId +
-        " class=gallery-image />"
+        "') >Remove</button> \
+        </div>"
     );
-    imagesContainer.innerHTML = allImageTags.join("");
   }
-};
+  imagesContainer.innerHTML = allImageContainers.join("");
+}
 
-readImagesInformation(jsonImagesInformation);
+function addImage() {}
+
+function removeImage(imageContainerId) {
+  console.log(imageContainerId);
+  delete jsonImagesInformation[imageContainerId];
+  readImagesInformation();
+}
+
+readImagesInformation();

@@ -31,6 +31,8 @@ a.nav__link:hover {
 }
 
 .site-content {
+  display: flex;
+  flex-flow: column nowrap;
   padding-top: 4vw;
   padding-left: 2%;
 }
