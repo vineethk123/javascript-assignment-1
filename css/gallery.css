@@ -1,0 +1,16 @@
+.gallery-heading {
+  text-align: center;
+  padding-bottom: 2vw;
+}
+
+#image-container {
+  display: flex;
+  flex-flow: row wrap;
+  margin: 1vw;
+}
+
+.gallery-image {
+  margin: 0 1vw 1vw 0;
+  height: 15vw;
+  width: 15vw;
+}

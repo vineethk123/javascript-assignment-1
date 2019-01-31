@@ -13,15 +13,6 @@ validateForm = () => {
   }
 };
 
-readImageInfo = () => {
-  $.get("resources/image_info.json", function(jsonobj) {});
-  /*let imagesInformation = JSON.parse(jsonImagesInformation);
-  for (const imageInformation of imagesInformation) {
-    document.getElementById(imageInformation["id"]).getAttribute("src") = imageInformation['imageURL'];
-  }*/
-};
-
-readImageInfo();
 // Load nav-bar from a html file.
 $(function() {
   $(".nav-container").load("nav-bar.html");
