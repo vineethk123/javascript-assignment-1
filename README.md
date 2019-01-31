@@ -1,2 +1,2 @@
-# my-first-github-page
-My first site with GitHub pages
+# JavaScript Assignment 1
+This repo contains code for my JavaScript Assignment 1
