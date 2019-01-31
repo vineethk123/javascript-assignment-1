@@ -12,8 +12,3 @@ validateForm = () => {
     return false;
   }
 };
-
-// Load nav-bar from a html file.
-$(function() {
-  $(".nav-container").load("nav-bar.html");
-});

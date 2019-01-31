@@ -1,16 +1,16 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0, maximum-scale=1.0"
-    />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>HTML and CSS Assignment</title>
     <link
       href="https://fonts.googleapis.com/css?family=Roboto:400,700"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/gallery.css" />
   </head>
   <body>
     <div class="site-container">
@@ -24,12 +24,10 @@
         </nav>
       </div>
       <div class="site-content">
-        <h2>Hi and Welcome to my site!</h2>
-        <p>
-          This site is being hosted on GitHub pages. It directly renders the
-          code from my repository.
-        </p>
+        <h2 class="page-heading">Gallery Admin</h2>
+        <div id="images-container"></div>
       </div>
     </div>
+    <script src="js/gallery.js"></script>
   </body>
 </html>
