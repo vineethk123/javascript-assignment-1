@@ -29,6 +29,38 @@
         <div id="all-image-container"></div>
       </div>
     </div>
-    <script src="js/gallery.js"></script>
+    <script type="module">
+      import { stringImagesInformation } from "./js/images-information.js";
+      // Store images information in local storage and retreive it as a JSON object.
+      localStorage.setItem("images-information", stringImagesInformation);
+      let retrievedImagesInformation = localStorage.getItem(
+        "images-information"
+      );
+      let jsonImagesInformation = JSON.parse(retrievedImagesInformation);
+      let imagesContainer = document.getElementById("all-image-container");
+      let allImageContainers = [];
+      for (let [imageId, imageInformation] of Object.entries(
+        jsonImagesInformation
+      )) {
+        let imageHTML =
+          "<img src=" +
+          imageInformation.imageURL +
+          " data-name=" +
+          imageInformation.name +
+          " data-description=" +
+          imageInformation.description +
+          " data-upload-date=" +
+          imageInformation.uploadDate +
+          " class=gallery-image />";
+        allImageContainers.push(
+          "<div class=image-container id=" +
+            imageId +
+            ">" +
+            imageHTML +
+            "</div>"
+        );
+      }
+      imagesContainer.innerHTML = allImageContainers.join("");
+    </script>
   </body>
 </html>
